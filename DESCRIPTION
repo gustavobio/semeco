@@ -1,0 +1,13 @@
+Package: semeco
+Type: Package
+Title: Examples of Structural Equation Modelling Usage in Ecology
+Version: 0.1.0
+Author: Gustavo Carvalho
+Maintainer: Gustavo Carvalho <gustavo.bio@gmail.com>
+Description: This package contains data and specified structural models published in
+ ecological journals. Models follow the lavaan syntax.
+License: GPL (>= 2)
+URL: http://www.github.com/gustavobio/semeco
+BugReports: http://www.github.com/gustavobio/semeco/issues
+LazyData: TRUE
+RoxygenNote: 5.0.1
