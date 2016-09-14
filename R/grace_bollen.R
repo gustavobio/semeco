@@ -1,11 +1,11 @@
-#' Data and model from Grace and Bollen 2005
+#' Data and model from Grace and Bollen 2005 (Figure 2)
 #'
 #' Data and model specification from the commentary 'Interpreting the Results
 #' from Multiple Regression and Structural Equation Models' published in the
 #' Bulletin of the Ecological Society of America (2005).
 #'
 #' @docType data
-#' @format A covariance matrix with 4 variables
+#' @format A covariance matrix with 4 variables and model in Figure 2.
 #' @aliases grace_bollen grace_bollen.cov grace_bollen.model
 #' @name grace_bollen
 #' @usage
