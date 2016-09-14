@@ -3,7 +3,7 @@
 #' Examples of structural equation modelling usage in Ecology
 #'
 #' This package contains data and specified structural models published in
-#' ecological journals. Models follow the lavaan syntax.
+#' ecological journals. Models follow the lavaan syntax
 #'
 #' @docType package
 #' @name semeco

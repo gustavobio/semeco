@@ -10,6 +10,6 @@ Examples of structural equation modelling usage in Ecology
 }
 \details{
 This package contains data and specified structural models published in
-ecological journals. Models follow the lavaan syntax.
+ecological journals. Models follow the lavaan syntax
 }
 
