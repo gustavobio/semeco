@@ -1,0 +1,61 @@
+---
+title: "Exercícios 01 (não precisa entregar)"
+author: "Gustavo H. Carvalho"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Dados para os exercícios
+
+Neste exercício, usaremos um conjunto de dados com medidas de tamanho corporal de
+pardais. Os dados estão no objeto `bumpus` do pacote `semeco`:
+
+```{r}
+library(semeco)
+data(pugesek)
+str(bumpus)
+```
+
+Nos dados, cada linha corresponde à um indivíduo. As medidas de comprimento estão em mm e 
+o peso está em gramas. Crie um novo conjunto de dados chamado `bumpus_females` apenas com as fêmeas (utilize a coluna sex).
+
+```{r, echo = FALSE}
+bumpus_females <- subset(bumpus, sex == "f")
+```
+```{r}
+str(bumpus_females)
+```
+
+Selecione apenas as colunas com as variáveis relacionadas às medidas corporais:
+
+```{r}
+bumpus_females <- bumpus_females[, -c(1:4)]
+str(bumpus_females)
+```
+
+## Exercícios
+
+1. Crie uma matriz de covariâncias entre as variáveis e chame-a de `bumpus_cov`.
+
+2. Crie uma matriz de correlações entre as variáveis e chame-a de `bumpus_cor`.
+
+3. Crie diagramas de dispersão par à par com os dados e compare-os com as matrizes
+de covariâncias e correlações:
+
+```{r, eval = FALSE}
+# pch = "." plota pontos (.) com um fator de expansão (cex) igual a 3.
+pairs(bumpus_females, pch = ".", cex = 3) 
+```
+
+4. Quais são as médias e os desvios-padrão das variáveis? Crie um objeto chamado
+`bumpus_female_std` com as variáveis padronizadas. Recalcule as médias e os desvios-padrão,
+ agora com os dados padronizados.
+ 
+5. Crie uma matriz de covariâncias entre as variáveis padronizadas. Algo mudou? E as correlações, foram alteradas?
+
+6. O peso (`weight`) dos pardais está em gramas. Transforme-os para kg e recalcule as covariâncias 
+e correlações, prestando atenção aquelas que envolvem a variável `weight`. Algo mudou? Por quê?

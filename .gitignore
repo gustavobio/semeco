@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-.Rhistory
 .DS_Store
 
+inst/doc

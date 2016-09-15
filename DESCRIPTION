@@ -11,3 +11,6 @@ URL: http://www.github.com/gustavobio/semeco
 BugReports: http://www.github.com/gustavobio/semeco/issues
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
