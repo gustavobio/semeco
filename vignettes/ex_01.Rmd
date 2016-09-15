@@ -57,5 +57,5 @@ pairs(bumpus_females, pch = ".", cex = 3)
  
 5. Crie uma matriz de covariâncias entre as variáveis padronizadas. Algo mudou? E as correlações, foram alteradas?
 
-6. O peso (`weight`) dos pardais está em gramas. Transforme-os para kg e recalcule as covariâncias 
+6. O peso (`weight`) dos pardais está em gramas. Transforme-os para kilogramas e recalcule as covariâncias 
 e correlações, prestando atenção aquelas que envolvem a variável `weight`. Algo mudou? Por quê?
