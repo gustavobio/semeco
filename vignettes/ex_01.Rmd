@@ -59,3 +59,6 @@ pairs(bumpus_females, pch = ".", cex = 3)
 
 6. O peso (`weight`) dos pardais está em gramas. Transforme-os para kilogramas e recalcule as covariâncias 
 e correlações, prestando atenção aquelas que envolvem a variável `weight`. Algo mudou? Por quê?
+
+7. Calcule o coeficiente de regressão não-padronizado e padronizado entre `weight` e `total.length` (`weight ~ total.length`). 
+Analise as matrizes de covariâncias e correlações e entenda como os coeficientes foram gerados.

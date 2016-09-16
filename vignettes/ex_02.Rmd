@@ -1,0 +1,77 @@
+---
+title: "Exercícios 02"
+author: "Gustavo H. Carvalho"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Dados para o exercício
+
+Neste exercício, usaremos a matriz de covariâncias `np` no pacote `semeco`. Por 
+hora, ignoraremos as premissas dos dados e focaremos apenas no modelo e em seus 
+parâmetros.
+
+```{r}
+library(semeco)
+data(np)
+np
+```
+
+Para ajustar o modelo, usaremos o pacote `lavaan`, que tem uma sintaxe própria para
+especificação de modelos. Os modelos na sintaxe do `lavaan` são apenas conjuntos de regressões
+em um objeto de texto delimitado por aspas simples, em que `~` indica regressões e `~~` variâncias e covariâncias.
+
+![Diversidade de plantas e microoganismos](`r system.file("extdata", "np.png", package = "semeco")`)
+
+O modelo acima tem a seguinte sintaxe no lavaan:
+```{r}
+modelo <- '
+plants ~ N + P
+micro ~ N + P
+plants ~~ 0*micro
+'
+```
+
+Normalmente, variâncias e covariâncias não precisam ser especificadas no modelo, já que
+elas estão presentes em todos eles. No exemplo acima, fixamos a covariância entre plantas
+e microorganismos em 0, já que não nos interessa estimar esse parâmetro agora e, por padrão,
+o lavaan estima todas as covariâncas entre variáveis endógenas (dependentes)
+
+## Exercícios
+
+1. Qual o número máximo de parâmetros que poderiam ser estimados no modelo acima? Lembre-se
+da equação `t = v(v+1)/2`, em que `v` é o número de variáveis no modelo.
+
+2. Quantos graus de liberdade você espera que o modelo tenha? Lembre-se que os graus de liberdade são
+dados pela subtração do número máximo de parâmetros (`t`) e o número de parâmetros estimados no nosso modelo.
+Todas as variâncias, covariâncias e efeitos de uma variável sobre outra utilizam um grau de liberdade.
+
+3. Ajuste o modelo usando a função `sem` do pacote `lavaan`:
+```{r}
+library(lavaan)
+ajuste <- sem(modelo, sample.cov = np, sample.nobs = 150)
+summary(ajuste)
+np
+```
+Por enquanto, ignore as informações sobre o ajuste do modelo. O número de graus de liberdade 
+reportado é aquele que você esperava? Nas linhas correspondentes às regressões, tente determinar
+a que cada coluna corresponde (Estimate, Std.Err, z-value e P). 
+
+4. Agora, veja o sumário do modelo usando o argumento `standardized = TRUE`:
+```{r}
+summary(ajuste, standardized = TRUE)
+```
+O que mudou?
+
+5. A função `inspect` nos dá alguns detalhes do modelo, como o R^2 das variáveis
+endógenas:
+```{r}
+inspect(ajuste, "r2")
+```
+Qual a relação dos coeficientes de determinação acima com as variâncias das variáveis endógenas
+no exercício anterior?
+
