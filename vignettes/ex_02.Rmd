@@ -75,3 +75,5 @@ inspect(ajuste, "r2")
 Qual a relação dos coeficientes de determinação acima com as variâncias das variáveis endógenas
 no exercício anterior?
 
+6. O que aconteceria com os erros padrão dos parâmetros se o tamanho amostral fosse 50 em vez de 150? Por quê? Faça o teste reajustando o modelo com `sample.nobs = 50` 
+
