@@ -1,5 +1,5 @@
 ---
-title: "Exercícios 01 (não precisa entregar)"
+title: "Exercícios 01"
 author: "Gustavo H. Carvalho"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
