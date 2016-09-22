@@ -1,0 +1,29 @@
+---
+title: "Exercícios 04"
+author: "Gustavo H. Carvalho"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### Dados para os exercícios
+
+Utilizaremos dados de medidas de pardais:
+
+```{r, eval = F}
+library(semeco)
+data(pugesek)
+bumpus
+```
+
+### Exercícios
+
+1. Especifique um modelo de análise confirmatória de fatores com dois fatores: tamanho geral e tamanho da cabeça. Utilize as variáveis weight, alar.extent, e length.sternum como indicadores do tamanho geral e width.skull e length.beak.head como indicadores do tamanho da cabeça.
+2. Teste as premissas dos dados.
+3. Ajuste o modelo com a função `cfa`.
+4. Há algum indicador pouco confiável?
+5. Refaça o ajuste, agora usando o argumento `group = "sex"` na função `cfa`. O que mudou?
+6. A sobrevivência é explicada pelas variáveis latentes? Teste o modelo?
