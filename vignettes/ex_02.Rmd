@@ -77,5 +77,5 @@ no exercício anterior?
 
 6. O que aconteceria com os erros padrão dos parâmetros se o tamanho amostral fosse 50 em vez de 150? Por quê? Faça o teste reajustando o modelo com `sample.nobs = 50` 
 
-7. O que o valor de MLX2 e seu respectivo valor de P nos dizem sobre o modelo?
+7. O que o valor de MLX2 nos diz sobre o modelo?
 
