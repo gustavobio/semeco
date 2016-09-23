@@ -1,0 +1,22 @@
+---
+title: "Exercícios 07"
+author: "Gustavo H. Carvalho"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### Dados para o exercício
+```{r}
+library(semeco)
+data(stiles)
+```
+
+De acordo com os autores, eles transformaram as variáveis `frag.area`, `isolation` e `mean.plant.density` com `log`. Reproduza essas transformações antes de usar os dados.
+
+1. Reproduza o modelo da figura 1 do artigo anexo.
+2. Como o número de observações é muito baixo, reajuste o modelo calculando os erros por meio de bootstrapping com os argumentos
+`se = "boot"` e `test = "boot"`.

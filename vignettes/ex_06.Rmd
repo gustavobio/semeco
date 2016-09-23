@@ -1,0 +1,18 @@
+---
+title: "Exercícios 06"
+author: "Gustavo H. Carvalho"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### Dados para os exercícios
+  
+https://gist.github.com/gustavobio/ebb94a9cdfb93d7de81b94e6f12e602b
+
+### Exercícios
+
+1. Reproduza a análise na figura 6 do artigo anexo.
